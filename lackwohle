@@ -16,6 +16,4 @@ if _G.blackhole == true then
                         local Eventp = game:GetService("ReplicatedStorage").Remotes.Damage
                         Eventp:InvokeServer(A_9, A_10, A_11)
                         _G.blackhole = false
-                    
-end
-end
+                   
