@@ -1,1 +1,21 @@
-
+while true do wait()
+if _G.blackhole == true then
+    local A_9 = getrenv()._G.Pass
+                        local A_10 = game.Players.LocalPlayer.Backpack.Main.LockOnScript.LockOn.Value
+                        local A_11 = 
+                            {
+                                ["HitTime"] = 1,
+                                ["Type"] = "Knockback", 
+                                ["HitEffect"] = "KnifeHitEffect",
+                                ["HurtAnimation"] = game:GetService("ReplicatedStorage").Animations.HurtAnimations.Hurt3,
+                                ["Sound"] = game:GetService("ReplicatedStorage").RogueSounds.BaneDischarge,
+                                ["Velocity"] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * math.huge,
+                                ["CombatInv"] = true,
+                                ["Damage"] = 0
+                            }
+                        local Eventp = game:GetService("ReplicatedStorage").Remotes.Damage
+                        Eventp:InvokeServer(A_9, A_10, A_11)
+                        _G.blackhole = false
+                    
+end
+end
